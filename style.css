@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    max-width: 1440px;
+    font-family : 'Birthstone', cursive ;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .bloc_page {
+    max-width: 1440px;
+  }
+  /*loader*/
+  @keyframes fadeOut {
+    0%, 60% {
+      opacity: 1;
+      z-index: 5;
+    }
+    75% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0;
+      z-index: -9;
+    }
+  }
+  @keyframes bar {
+    0% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    50% {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+      transform: scaleY(0);
+      visibility: hidden;
+    }
+  }
+  @keyframes fill {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .loading {
+    font-size: 8rem;
+    color:#e9dbb5;
+    text-align: center;
+    background-color: #34323f;
+    height: 100%;
+    width: 96%;
+    position: fixed;
+    display: inline-block;
+    Z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+    animation: fadeOut 3s both;
+    -webkit-animation: fadeOut 3s both;
+  }
+
+  .loader {
+    position: relative;
+  }
+  
+  .Bar:before,
+  .Bar:after,
+  .Bar span:before,
+  .Bar span:after {
+    content: "";
+    position: absolute; 
+    display: block;
+    margin: 10rem;
+    left: 0px;
+    top: 0;
+    padding-left: 120px;
+    width: 30px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #A26D5D;
+    -webkit-animation: bar 1s linear infinite;
+    animation: bar 1s linear infinite;
+  }
+
+  @media screen and (max-width: 320px) {
+    .Bar:before,
+  .Bar:after,
+  .Bar span:before,
+  .Bar span:after {
+      margin: -2.8rem;
+    }
+  }
+  
+  .Bar:after {
+    left: 15px;
+    top: -15px;
+    background-color: #E2B4A5;
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+  }
+  @media screen and (max-width: 320px) {
+    .Bar:after {
+      margin: 4rem;
+    }
+  }
+  .Bar span:before {
+    left: 35px;
+    top: -30px;
+    background-color: #fbe4d2;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: -0.5s;
+  }
+  @media screen and (max-width: 320px) {
+    .Bar span:before {
+      margin: -1.6rem;
+    }
+  }
+  .Bar span:after {
+    left: 45px;
+    top: 35px;
+    background-color: #efefd4;
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+  }
+  @media screen and (max-width: 320px) {
+    .Bar span:after {
+      margin: 1.8rem;
+    }
+  }
+  /*twenty years*/
+  .logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: center;
+    align-items: center;
+  }
+  .logo img {
+    width : 100%;
+    height: 360px;
+  }
+
+  body {
+    background-color:wheat;
+  }
+
+  #card {
+    width: 98%;
+    margin: 0, auto;
+    text-align: center;
+    align-content: center;
+  }
+
+  h1{
+    font-size: 12rem;
+  }
+
+  P{
+    font-size : 3rem;
+  }
